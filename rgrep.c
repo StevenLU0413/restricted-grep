@@ -1,8 +1,6 @@
 /**
  * Restricted version of grep, as defined in the CS221
  * course website for Project 2.
- *
- * You must not change this file.
  */
 
 #include <stdio.h>
@@ -14,7 +12,7 @@ int main(int argc, char **argv) {
         return 2;
     }
 
-    /* we're not going to worry about long lines */
+    /* not going to worry about long lines */
     char buf[4096];
 
     while (!feof(stdin) && !ferror(stdin)) {
