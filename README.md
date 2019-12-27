@@ -1,4 +1,5 @@
 # Restricted grep (rgrep)
+###### _Completed Nov. 18, 2019_
 
 This program implements "rgrep", a simplified, restricted grep. rgrep is "restricted” in the sense that the patterns it matches only support a few regular operators: + . \ ?. The way rgrep is used is that a pattern is specified on the command line, and rgrep then reads lines from its standard input and prints them out on its standard output if and only if the pattern “matches” the line.
 
