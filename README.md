@@ -5,11 +5,11 @@ This program implements "rgrep", a simplified, restricted grep. rgrep is "restri
 | Symbol           | Pattern       |
 | ---------------- | ------------- |
 | `.` (period)        | Matches any character | 
-| `+` (plus sign)     | The preceding character may appear 1 or more times (in other words, the preceding character can be repeated several times in a row)      |
-| `?` (question mark) | The preceding character may appear between 0 and 1 times (in other words, the preceding character is optional)      |
-| `\` (backslash)     | “Escapes” the following character, nullifying any special meaning it has      |
+| `+` (plus sign)     | The preceding character may appear 1 or more times (the preceding character can be repeated several times in a row) |
+| `?` (question mark) | The preceding character may appear between 0 and 1 times (the preceding character is optional) |
+| `\` (backslash)     | “Escapes” the following character, nullifying any special meaning it has |
 
-Usage: `./rgep '.\.txt' < input` where input is the standard input.
+Usage: `./rgep 'pattern' < input` where 'pattern' is the pattern to be matched against and input is the standard input.
 
 Should the input contain:
 
