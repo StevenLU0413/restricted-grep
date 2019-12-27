@@ -23,5 +23,12 @@ check: clean default
 	test "`echo "CCCCCCC\nC+\nC++" | ./rgrep '.\+\+'`" = "C++"
 	test "`echo "GG" | ./rgrep 'G+'`" = "GG"
 	test "`echo "USF_CS221.jpg" | ./rgrep 'U.F_CL?S2+1\.jpg'`" = "USF_CS221.jpg"
+	test "`echo "ABBCCC" | ./rgrep 'A+B+C+'`" = "ABBCCC"
+	test "`echo "RED\nREED" | ./rgrep 'RE?D'`" = "RED"
+	test "`echo "testcase.tiff.mkv.exe" | ./rgrep 'testcase\.tiff\.mkv\.exe'`" = "testcase.tiff.mkv.exe"
+	test "`echo "abcde" | ./rgrep 'abcde?c?'`" = "abcde"
+	test "`echo "a?bcde" | ./rgrep 'a\?bc'`" = "a?bcde"
+	test "`echo "aaab?cde" | ./rgrep 'a+\b\?c'`" = "aaab?cde"
+	test "`echo "abcde" | ./rgrep 'a?b?c?d?e?f?g?'`" = "abcde"
 	@echo "Passed sanity check."
 
